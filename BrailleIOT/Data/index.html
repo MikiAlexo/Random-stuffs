@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESP8266 Message Sender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; background: #121212; color: white; text-align: center; padding-top: 50px; }
+    input { padding: 10px; width: 60%; max-width: 300px; }
+    button { padding: 10px 20px; margin-left: 5px; cursor: pointer; background: #4CAF50; color: white; border: none; }
+    button:hover { background: #45a049; }
+  </style>
+</head>
+<body>
+  <h2>Send Message to ESP8266</h2>
+  <input type="text" id="msg" placeholder="Type your message">
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    function sendMessage() {
+      let message = document.getElementById('msg').value;
+      fetch('/send?data=' + encodeURIComponent(message))
+        .then(response => response.text())
+        .then(text => alert(text))
+        .catch(err => alert('Error: ' + err));
+    }
+  </script>
+</body>
+</html>
