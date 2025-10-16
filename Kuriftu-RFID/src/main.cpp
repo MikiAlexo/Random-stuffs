@@ -26,7 +26,7 @@ MFRC522 mfrc522(ss_PIN, RST_PIN);
 #define WIFI_SSID "Blynk"
 #define WIFI_PASSWORD "12345678"
 
-#define API_KEY "AIzaSyC-KYfsvpre8whJ1fk2WqZUNAzdE9Biopw"
+#define API_KEY "NUH-UH not giving away my key"
 #define DATABASE_URL "https://esp32-firebase-demo-ed97b-default-rtdb.europe-west1.firebasedatabase.app/" 
 
 FirebaseData fbdo;
@@ -310,6 +310,7 @@ digitalWrite(buzz_pin,LOW);
 
 
 void log(){
+
 
 
 
